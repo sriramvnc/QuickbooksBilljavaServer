@@ -63,30 +63,43 @@ public final class BillHelper {
 
 */
 
-		/*Line line1 = new Line();
-		line1.setAmount(new BigDecimal("21128.00"));
+		Line line1 = new Line();
+		line1.setAmount(new BigDecimal("25116.00"));
 		line1.setDetailType(LineDetailTypeEnum.ACCOUNT_BASED_EXPENSE_LINE_DETAIL);
 		AccountBasedExpenseLineDetail detail = new AccountBasedExpenseLineDetail();
 		Account account = AccountHelper.getExpenseBankAccount(service);
 		ReferenceType expenseAccountRef = AccountHelper.getAccountRef(account);
 		detail.setAccountRef(expenseAccountRef);
 		line1.setAccountBasedExpenseLineDetail(detail);
-		List<Line> lines1 = new ArrayList<Line>();
-		lines1.add(line1);
-		bill.setLine(lines1);*/
 
-		Line line1 = new Line();
+		Line line2 = new Line();
+		line2.setAmount(new BigDecimal("126.00"));
+		line2.setDetailType(LineDetailTypeEnum.ACCOUNT_BASED_EXPENSE_LINE_DETAIL);
+		AccountBasedExpenseLineDetail detail2 = new AccountBasedExpenseLineDetail();
+		Account account2 = AccountHelper.getExpenseBankAccount(service);
+		ReferenceType expenseAccountRef2 = AccountHelper.getAccountRef(account);
+		detail2.setAccountRef(expenseAccountRef2);
+		line2.setAccountBasedExpenseLineDetail(detail);
+
+
+		List<Line> lines1 = new ArrayList<Line>();
+
+		lines1.add(line1);
+        lines1.add(line2);
+		bill.setLine(lines1);
+
+		/*Line line1 = new Line();
 		line1.setAmount(new BigDecimal("198.00"));
 		line1.setDetailType(LineDetailTypeEnum.ITEM_BASED_EXPENSE_LINE_DETAIL);
 		ItemBasedExpenseLineDetail detail = new ItemBasedExpenseLineDetail();
-		//Account account = AccountHelper.getExpenseBankAccount(service);
-		//ReferenceType expenseAccountRef = AccountHelper.getAccountRef(account);
-		//detail.setAccountRef(expenseAccountRef);
-		//line1.setAccountBasedExpenseLineDetail(detail);
+		Account account = AccountHelper.getExpenseBankAccount(service);
+		ReferenceType expenseAccountRef = AccountHelper.getAccountRef(account);
+		detail.setAccountRef(expenseAccountRef);
+		line1.setAccountBasedExpenseLineDetail(detail);
 		List<Line> lines1 = new ArrayList<Line>();
 		lines1.add(line1);
 		bill.setLine(lines1);
-
+   */
   // adding items, quantity
 
 		/*Line line3 = new Line();
